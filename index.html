@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clip Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>OpusClip</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active"><span class="icon">🏠</span> Home</a>
+            <a href="#" class="nav-item"><span class="icon">🗂️</span> Projects</a>
+            <a href="#" class="nav-item"><span class="icon">💾</span> Saved</a>
+            <a href="#" class="nav-item"><span class="icon">📅</span> Calendar</a>
+            <a href="#" class="nav-item"><span class="icon">📊</span> Analytics</a>
+            <a href="#" class="nav-item"><span class="icon">🔗</span> Integrations</a>
+            <a href="#" class="nav-item"><span class="icon">⚙️</span> Settings</a>
+        </nav>
+    </div>
+    <div class="main-content">
+        <div class="dashboard">
+            <div class="input-modal">
+                <h1>Get clips in 1 click</h1>
+                <div class="input-options">
+                    <button class="input-btn">YouTube Link</button>
+                    <button class="input-btn">Upload</button>
+                    <button class="input-btn">Google Drive</button>
+                </div>
+                <form id="clip-form">
+                    <input type="url" id="youtube-url" placeholder="Paste YouTube link here..." required>
+                    <button type="submit" class="cta-btn">Generate Clips</button>
+                </form>
+            </div>
+            <div class="features">
+                <div class="feature-icon">🟣 Long to Shorts</div>
+                <div class="feature-icon">🟢 AI Captions</div>
+                <div class="feature-icon">✂️ Video Editor</div>
+                <div class="feature-icon">🔊 Enhance Speech</div>
+                <div class="feature-icon">📱 AI Reframe</div>
+                <div class="feature-icon">🎬 AI B-Roll</div>
+                <div class="feature-icon">🎣 AI Hook</div>
+            </div>
+            <div class="controls">
+                <div class="plan-selector">
+                    <label>Plan:</label>
+                    <select id="plan">
+                        <option value="free">Free (60 credits)</option>
+                        <option value="starter">Starter (150 credits)</option>
+                        <option value="pro">Pro (300 credits)</option>
+                    </select>
+                </div>
+                <div id="credits-info">Credits: 60</div>
+                <div class="toggles">
+                    <label><input type="checkbox" id="auto-save"> Auto-save</label>
+                    <label><input type="checkbox" id="auto-import"> Auto-import</label>
+                </div>
+            </div>
+            <div class="project-tabs">
+                <button class="tab-btn active" data-tab="all">All Projects</button>
+                <button class="tab-btn" data-tab="processing">Being Clipped</button>
+                <button class="tab-btn" data-tab="completed">Completed</button>
+            </div>
+            <div id="results" class="projects-grid"></div>
+        </div>
+        <button class="support-btn">Questions?</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
